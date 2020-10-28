@@ -1,3 +1,10 @@
+<%-- 
+    Document   : post-job
+    Created on : Oct 28, 2020, 11:25:40 AM
+    Author     : Duong Nguyen
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!doctype html>
 <html lang="en">
@@ -46,22 +53,22 @@
             <header class="site-navbar mt-3">
                 <div class="container-fluid">
                     <div class="row align-items-center">
-                        <div class="site-logo col-6"><a href="index.html">HappyJob</a></div>
+                        <div class="site-logo col-6"><a href="index.jsp">HappyJob</a></div>
 
                         <nav class="mx-auto site-navigation">
                             <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
-                                <li><a href="index.html" class="nav-link active">Trang chủ</a></li>
-                                <li><a href="services.html">Dịch vụ</a></li>
-                                <li><a href="portfolio.html">Nhà tuyển dụng</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contact.html">Liên hệ</a></li>
+                                <li><a href="index.jsp" class="nav-link active">Trang chủ</a></li>
+                                <li><a href="services.jsp">Dịch vụ</a></li>
+                                <li><a href="portfolio.jsp">Nhà tuyển dụng</a></li>
+                                <li><a href="blog.jsp">Blog</a></li>
+                                <li><a href="contact.jsp">Liên hệ</a></li>
                             </ul>
                         </nav>
 
                         <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
                             <div class="ml-auto">
-                                <a href="post-job.html" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Đăng tuyển</a>
-                                <a href="login.html" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-lock_outline"></span>Đăng nhập</a>
+                                <a href="post-job.jsp" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Đăng tuyển</a>
+                                <a href="login.jsp" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-lock_outline"></span>Đăng nhập</a>
                             </div>
                             <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
                         </div>
@@ -77,7 +84,7 @@
                         <div class="col-md-7">
                             <h1 class="text-white font-weight-bold">Đăng tuyển</h1>
                             <div class="custom-breadcrumbs">
-                                <a href="index.html">Trang chủ</a> <span class="mx-2 slash">/</span>
+                                <a href="index.jsp">Trang chủ</a> <span class="mx-2 slash">/</span>
                                 <span class="text-white"><strong>Đăng tuyển</strong></span>
                             </div>
                         </div>
@@ -230,10 +237,10 @@
                         <div class="col-6 col-md-4 mb-4 mb-md-0">
                             <h3>Liên Kết</h3>
                             <ul class="list-unstyled">
-                                <li><a href="services.html">Dịch vụ</a></li>
-                                <li><a href="portfolio.html">Nhà tuyển dụng</a></li>
-                                <li><a href="testimonials.html">Đánh giá</a></li>
-                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="services.jsp">Dịch vụ</a></li>
+                                <li><a href="portfolio.jsp">Nhà tuyển dụng</a></li>
+                                <li><a href="testimonials.jsp">Đánh giá</a></li>
+                                <li><a href="blog.jsp">Blog</a></li>
                             </ul>
                         </div>
                         <div class="col-6 col-md-4 mb-4 mb-md-0">

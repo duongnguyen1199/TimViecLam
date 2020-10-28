@@ -1,3 +1,10 @@
+<%-- 
+    Document   : service-single
+    Created on : Oct 28, 2020, 11:26:35 AM
+    Author     : Duong Nguyen
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!doctype html>
 <html lang="en">
@@ -46,22 +53,22 @@
             <header class="site-navbar mt-3">
                 <div class="container-fluid">
                     <div class="row align-items-center">
-                        <div class="site-logo col-6"><a href="index.html">HappyJob</a></div>
+                        <div class="site-logo col-6"><a href="index.jsp">HappyJob</a></div>
 
                         <nav class="mx-auto site-navigation">
                             <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
-                                <li><a href="index.html" class="nav-link active">Trang chủ</a></li>
-                                <li><a href="services.html">Dịch vụ</a></li>
-                                <li><a href="portfolio.html">Nhà tuyển dụng</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contact.html">Liên hệ</a></li>
+                                <li><a href="index.jsp" class="nav-link active">Trang chủ</a></li>
+                                <li><a href="services.jsp">Dịch vụ</a></li>
+                                <li><a href="portfolio.jsp">Nhà tuyển dụng</a></li>
+                                <li><a href="blog.jsp">Blog</a></li>
+                                <li><a href="contact.jsp">Liên hệ</a></li>
                             </ul>
                         </nav>
 
                         <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
                             <div class="ml-auto">
-                                <a href="post-job.html" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Đăng tuyển</a>
-                                <a href="login.html" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-lock_outline"></span>Đăng nhập</a>
+                                <a href="post-job.jsp" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Đăng tuyển</a>
+                                <a href="login.jsp" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-lock_outline"></span>Đăng nhập</a>
                             </div>
                             <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
                         </div>
@@ -77,8 +84,8 @@
                         <div class="col-md-7">
                             <h1 class="text-white font-weight-bold">Giới thiệu dịch vụ</h1>
                             <div class="custom-breadcrumbs">
-                                <a href="index.html">Trang chủ</a> <span class="mx-2 slash">/</span>
-                                <a href="services.html">Dịch vụ</a> <span class="mx-2 slash">/</span>
+                                <a href="index.jsp">Trang chủ</a> <span class="mx-2 slash">/</span>
+                                <a href="services.jsp">Dịch vụ</a> <span class="mx-2 slash">/</span>
                                 <span class="text-white"><strong>Giới thiệu dịch vụ</strong></span>
                             </div>
                         </div>
@@ -86,9 +93,9 @@
                 </div>
             </section>
 
-            <section class="site-section block__18514" id="next-section">
-                <div class="container">
-                    <div class="row" id="accordion">
+            <section class="site-section block__18514" id="next-section accordion">
+                <div class="container" id="">
+                    <div class="row" >
                         <div class="col-lg-3 mr-auto" >
                             <div class="border p-4 rounded">
                                 <ul class="list-unstyled block__47528 mb-0">
@@ -105,55 +112,55 @@
                         <div class="col-lg-8 collapse show" id="collapseFive" aria-labelledby="headingOne" data-parent="#accordion" style="">
                             <span class="text-primary d-block mb-5"><span class="icon-magnet display-1"></span></span>
                             <h2 class="mb-4">Thiết kế đồ họa</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dolorum incidunt dolorem facere, officiis placeat consequuntur odit quasi, quam voluptates, deleniti! Neque tenetur in, omnis consectetur molestias expedita nostrum et.</p>
-                            <p>Sed odio temporibus quaerat laboriosam dicta ipsam eligendi deserunt architecto, aliquam in totam provident praesentium aperiam, id impedit aut delectus mollitia doloribus nostrum numquam tempore ullam reprehenderit nesciunt cumque veniam.</p>
-                            <p>Officia mollitia deserunt vel expedita deleniti iure eius illum dolor optio tempora! Fuga, voluptates omnis velit neque. Rerum aperiam consequatur vero, nulla dolores a. Sed, non veniam maiores recusandae iure.</p>
-                            <p>Nobis officia tempore porro incidunt quaerat commodi numquam exercitationem laboriosam deserunt, error excepturi et delectus quis explicabo repellendus obcaecati iusto. Delectus magni ducimus illo! Fugit quaerat debitis deserunt facere reiciendis!</p>
+                            <p>abc.</p>
+                            <p>abc.</p>
+                            <p>abc.</p>
+                            <p>abc.</p>
                             <p><a href="#" class="btn btn-primary btn-md mt-4">Tìm hiểu thêm</a></p>
                         </div>
                         <div class="col-lg-8 collapse" id="collapseSix" aria-labelledby="headingOne" data-parent="#accordion" >
                             <span class="text-primary d-block mb-5"><span class="icon-magnet display-1"></span></span>
                             <h2 class="mb-4">Chiến lược tiếp thị</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dolorum incidunt dolorem facere, officiis placeat consequuntur odit quasi, quam voluptates, deleniti! Neque tenetur in, omnis consectetur molestias expedita nostrum et.</p>
-                            <p>Sed odio temporibus quaerat laboriosam dicta ipsam eligendi deserunt architecto, aliquam in totam provident praesentium aperiam, id impedit aut delectus mollitia doloribus nostrum numquam tempore ullam reprehenderit nesciunt cumque veniam.</p>
-                            <p>Officia mollitia deserunt vel expedita deleniti iure eius illum dolor optio tempora! Fuga, voluptates omnis velit neque. Rerum aperiam consequatur vero, nulla dolores a. Sed, non veniam maiores recusandae iure.</p>
-                            <p>Nobis officia tempore porro incidunt quaerat commodi numquam exercitationem laboriosam deserunt, error excepturi et delectus quis explicabo repellendus obcaecati iusto. Delectus magni ducimus illo! Fugit quaerat debitis deserunt facere reiciendis!</p>
+                            <p>abc.</p>
+                            <p>abc.</p>
+                            <p>abc.</p>
+                            <p>abc.</p>
                             <p><a href="#" class="btn btn-primary btn-md mt-4">Tìm hiểu thêm</a></p>
                         </div>
                         <div class="col-lg-8 collapse" id="collapseSeven" aria-labelledby="headingOne" data-parent="#accordion" >
                             <span class="text-primary d-block mb-5"><span class="icon-magnet display-1"></span></span>
                             <h2 class="mb-4">Thiết kế web</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dolorum incidunt dolorem facere, officiis placeat consequuntur odit quasi, quam voluptates, deleniti! Neque tenetur in, omnis consectetur molestias expedita nostrum et.</p>
-                            <p>Sed odio temporibus quaerat laboriosam dicta ipsam eligendi deserunt architecto, aliquam in totam provident praesentium aperiam, id impedit aut delectus mollitia doloribus nostrum numquam tempore ullam reprehenderit nesciunt cumque veniam.</p>
-                            <p>Officia mollitia deserunt vel expedita deleniti iure eius illum dolor optio tempora! Fuga, voluptates omnis velit neque. Rerum aperiam consequatur vero, nulla dolores a. Sed, non veniam maiores recusandae iure.</p>
-                            <p>Nobis officia tempore porro incidunt quaerat commodi numquam exercitationem laboriosam deserunt, error excepturi et delectus quis explicabo repellendus obcaecati iusto. Delectus magni ducimus illo! Fugit quaerat debitis deserunt facere reiciendis!</p>
+                            <p>abc.</p>
+                            <p>abc.</p>
+                            <p>abc.</p>
+                            <p>abc.</p>
                             <p><a href="#" class="btn btn-primary btn-md mt-4">Tìm hiểu thêm</a></p>
                         </div>
                         <div class="col-lg-8 collapse" id="collapseEight" aria-labelledby="headingOne" data-parent="#accordion" >
                             <span class="text-primary d-block mb-5"><span class="icon-magnet display-1"></span></span>
                             <h2 class="mb-4">Tối ưu hóa công cụ tìm kiếm (SEO)</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dolorum incidunt dolorem facere, officiis placeat consequuntur odit quasi, quam voluptates, deleniti! Neque tenetur in, omnis consectetur molestias expedita nostrum et.</p>
-                            <p>Sed odio temporibus quaerat laboriosam dicta ipsam eligendi deserunt architecto, aliquam in totam provident praesentium aperiam, id impedit aut delectus mollitia doloribus nostrum numquam tempore ullam reprehenderit nesciunt cumque veniam.</p>
-                            <p>Officia mollitia deserunt vel expedita deleniti iure eius illum dolor optio tempora! Fuga, voluptates omnis velit neque. Rerum aperiam consequatur vero, nulla dolores a. Sed, non veniam maiores recusandae iure.</p>
-                            <p>Nobis officia tempore porro incidunt quaerat commodi numquam exercitationem laboriosam deserunt, error excepturi et delectus quis explicabo repellendus obcaecati iusto. Delectus magni ducimus illo! Fugit quaerat debitis deserunt facere reiciendis!</p>
+                           <p>abc.</p>
+                            <p>abc.</p>
+                            <p>abc.</p>
+                            <p>abc.</p>
                             <p><a href="#" class="btn btn-primary btn-md mt-4">Tìm hiểu thêm</a></p>
                         </div>
                         <div class="col-lg-8 collapse" id="collapseNine" aria-labelledby="headingOne" data-parent="#accordion" >
                             <span class="text-primary d-block mb-5"><span class="icon-magnet display-1"></span></span>
                             <h2 class="mb-4">Thiết kế Logo</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dolorum incidunt dolorem facere, officiis placeat consequuntur odit quasi, quam voluptates, deleniti! Neque tenetur in, omnis consectetur molestias expedita nostrum et.</p>
-                            <p>Sed odio temporibus quaerat laboriosam dicta ipsam eligendi deserunt architecto, aliquam in totam provident praesentium aperiam, id impedit aut delectus mollitia doloribus nostrum numquam tempore ullam reprehenderit nesciunt cumque veniam.</p>
-                            <p>Officia mollitia deserunt vel expedita deleniti iure eius illum dolor optio tempora! Fuga, voluptates omnis velit neque. Rerum aperiam consequatur vero, nulla dolores a. Sed, non veniam maiores recusandae iure.</p>
-                            <p>Nobis officia tempore porro incidunt quaerat commodi numquam exercitationem laboriosam deserunt, error excepturi et delectus quis explicabo repellendus obcaecati iusto. Delectus magni ducimus illo! Fugit quaerat debitis deserunt facere reiciendis!</p>
+                            <p>abc.</p>
+                            <p>abc.</p>
+                            <p>abc.</p>
+                            <p>abc.</p>
                             <p><a href="#" class="btn btn-primary btn-md mt-4">Tìm hiểu thêm</a></p>
                         </div>
                         <div class="col-lg-8 collapse" id="collapseTen" aria-labelledby="headingOne" data-parent="#accordion" >
                             <span class="text-primary d-block mb-5"><span class="icon-magnet display-1"></span></span>
                             <h2 class="mb-4">Bảo trì hệ thống</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dolorum incidunt dolorem facere, officiis placeat consequuntur odit quasi, quam voluptates, deleniti! Neque tenetur in, omnis consectetur molestias expedita nostrum et.</p>
-                            <p>Sed odio temporibus quaerat laboriosam dicta ipsam eligendi deserunt architecto, aliquam in totam provident praesentium aperiam, id impedit aut delectus mollitia doloribus nostrum numquam tempore ullam reprehenderit nesciunt cumque veniam.</p>
-                            <p>Officia mollitia deserunt vel expedita deleniti iure eius illum dolor optio tempora! Fuga, voluptates omnis velit neque. Rerum aperiam consequatur vero, nulla dolores a. Sed, non veniam maiores recusandae iure.</p>
-                            <p>Nobis officia tempore porro incidunt quaerat commodi numquam exercitationem laboriosam deserunt, error excepturi et delectus quis explicabo repellendus obcaecati iusto. Delectus magni ducimus illo! Fugit quaerat debitis deserunt facere reiciendis!</p>
+                            <p>abc.</p>
+                            <p>abc.</p>
+                            <p>abc.</p>
+                            <p>abc.</p>
                             <p><a href="#" class="btn btn-primary btn-md mt-4">Tìm hiểu thêm</a></p>
                         </div>
                     </div>
@@ -182,10 +189,10 @@
                         <div class="col-6 col-md-4 mb-4 mb-md-0">
                             <h3>Liên Kết</h3>
                             <ul class="list-unstyled">
-                                <li><a href="services.html">Dịch vụ</a></li>
-                                <li><a href="portfolio.html">Nhà tuyển dụng</a></li>
-                                <li><a href="testimonials.html">Đánh giá</a></li>
-                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="services.jsp">Dịch vụ</a></li>
+                                <li><a href="portfolio.jsp">Nhà tuyển dụng</a></li>
+                                <li><a href="testimonials.jsp">Đánh giá</a></li>
+                                <li><a href="blog.jsp">Blog</a></li>
                             </ul>
                         </div>
                         <div class="col-6 col-md-4 mb-4 mb-md-0">

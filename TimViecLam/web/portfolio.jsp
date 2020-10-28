@@ -1,10 +1,17 @@
+<%-- 
+    Document   : portfolio
+    Created on : Oct 28, 2020, 11:25:15 AM
+    Author     : Duong Nguyen
+--%>
 
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
     <head>
-        <title>FPT Software</title>
+        <title>Nhà tuyển dụng</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 
         <link rel="stylesheet" href="css/custom-bs.css">
         <link rel="stylesheet" href="css/jquery.fancybox.min.css">
@@ -45,22 +52,22 @@
             <header class="site-navbar mt-3">
                 <div class="container-fluid">
                     <div class="row align-items-center">
-                        <div class="site-logo col-6"><a href="index.html">HappyJob</a></div>
+                        <div class="site-logo col-6"><a href="index.jsp">HappyJob</a></div>
 
                         <nav class="mx-auto site-navigation">
                             <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
-                                <li><a href="index.html" class="nav-link active">Trang chủ</a></li>
-                                <li><a href="services.html">Dịch vụ</a></li>
-                                <li><a href="portfolio.html">Nhà tuyển dụng</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contact.html">Liên hệ</a></li>
+                                <li><a href="index.jsp" class="nav-link active">Trang chủ</a></li>
+                                <li><a href="services.jsp">Dịch vụ</a></li>
+                                <li><a href="portfolio.jsp">Nhà tuyển dụng</a></li>
+                                <li><a href="blog.jsp">Blog</a></li>
+                                <li><a href="contact.jsp">Liên hệ</a></li>
                             </ul>
                         </nav>
 
                         <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
                             <div class="ml-auto">
-                                <a href="post-job.html" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Đăng tuyển</a>
-                                <a href="login.html" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-lock_outline"></span>Đăng nhập</a>
+                                <a href="post-job.jsp" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Đăng tuyển</a>
+                                <a href="login.jsp" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-lock_outline"></span>Đăng nhập</a>
                             </div>
                             <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
                         </div>
@@ -74,69 +81,77 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-7">
-                            <h1 class="text-white font-weight-bold">FPT Software</h1>
+                            <h1 class="text-white font-weight-bold">Nhà tuyển dụng</h1>
                             <div class="custom-breadcrumbs">
-                                <a href="index.html">Trang chủ</a> <span class="mx-2 slash">/</span>
-                                <a href="portfolio.html">Nhà tuyển dụng</a> <span class="mx-2 slash">/</span>
-                                <span class="text-white"><strong>FPT Software</strong></span>
+                                <a href="index.jsp">Trang chủ</a> <span class="mx-2 slash">/</span>
+                                <span class="text-white"><strong>Nhà tuyển dụng</strong></span>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="site-section pb-0 portfolio-single" id="next-section">
+            <section class="site-section block__62272" id="next-section">
+
 
                 <div class="container">
 
-                    <div class="row mb-5 mt-5">
 
-                        <div class="col-lg-8">
-                            <figure>
-                                <a href="images/sq_img_6.jpg" data-fancybox="gallery"><img src="images/sq_img_6.jpg" alt="Image" class="img-fluid"></a>
-                            </figure>
-                            <figure>
-                                <a href="images/sq_img_2.jpg" data-fancybox="gallery"><img src="images/sq_img_2.jpg" alt="Image" class="img-fluid"></a>
-                            </figure>
-                            <figure>
-                                <a href="images/sq_img_7.jpg" data-fancybox="gallery"><img src="images/sq_img_7.jpg" alt="Image" class="img-fluid"></a>
-                            </figure>
-                            <figure class="mb-0">
-                                <a href="images/sq_img_8.jpg" data-fancybox="gallery"><img src="images/sq_img_8.jpg" alt="Image" class="img-fluid"></a>
-                            </figure>
+                    <div class="row justify-content-center mb-5" data-aos="fade-up">
+                        <div id="filters" class="filters text-center button-group col-md-7">
+                            <button class="btn btn-primary active" data-filter="*">Tất cả</button>
+                            <button class="btn btn-primary" data-filter=".web">Web</button>
+                            <button class="btn btn-primary" data-filter=".design">Thiết kế</button>
+                            <button class="btn btn-primary" data-filter=".brand">Du lịch</button>
+                        </div>
+                    </div>  
+
+                    <div id="posts" class="row no-gutter">
+                        <div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+                            <a href="portfolio-single.jsp" class="item-wrap">
+                                <span>PPO Việt Nam</span>
+                                <img class="img-fluid" src="images/sq_img_1.jpg">
+                            </a>
+                        </div>
+                        <div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+                            <a href="portfolio-single.jsp" class="item-wrap">
+                                <span class="icon-add"></span>
+                                <img class="img-fluid" src="images/sq_img_2.jpg">
+                            </a>
                         </div>
 
-                        <div class="col-lg-4 ml-auto h-100 jm-sticky-top">
+                        <div class="item brand col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+                            <a href="portfolio-single.jsp" class="item-wrap">
+                                <span class="icon-add"></span>
+                                <img class="img-fluid" src="images/sq_img_3.jpg">
+                            </a>
+                        </div>
 
+                        <div class="item design col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
 
-                            <div class="mb-4">
-                                <h3 class="mb-4 h4 border-bottom">Giới thiệu</h3>
+                            <a href="portfolio-single.jsp" class="item-wrap">
+                                <span class="icon-add"></span>
+                                <img class="img-fluid" src="images/sq_img_4.jpg">
+                            </a>
 
-                                <p class="mb-0">Nostrum iure atque enim quisquam minima distinctio omnis consequatur aliquam suscipit quidem esse aspernatur Libero excepturi animi repellendus porro impedit</p>
-                            </div>
+                        </div>
 
-                            <div class="row mb-4">
-                                <div class="col-sm-12 col-md-12 mb-4 col-lg-12">
-                                    <strong class="d-block text-black">Các vị trí tuyển dụng</strong>
-                                    Thiết kế, Front-End và Back-End (WordPress)
-                                </div>
-                                <div class="col-sm-12 col-md-12 mb-4 col-lg-12">
-                                    <strong class="d-block text-black">Năm sáng lập</strong>
-                                    2019
-                                </div>
-                                <div class="col-sm-12 col-md-12 mb-4 col-lg-12">
-                                    <strong class="d-block text-black mb-3">URL trang web</strong>
-                                    <a href="#" class="btn btn-outline-primary border-width-2">Truy cập trang web</a>
-                                </div>
-                            </div>
+                        <div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+                            <a href="portfolio-single.jsp" class="item-wrap">
+                                <span class="icon-add"></span>
+                                <img class="img-fluid" src="images/sq_img_5.jpg">
+                            </a>
+                        </div>
 
+                        <div class="item brand col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+                            <a href="portfolio-single.jsp" class="item-wrap">
+                                <span>FPT Software</span>
+                                <img class="img-fluid" src="images/sq_img_6.jpg">
+                            </a>
                         </div>
                     </div>
-
-
-
-
                 </div>
+
             </section>
 
             <section class="site-section bg-light">
@@ -204,10 +219,10 @@
                         <div class="col-6 col-md-4 mb-4 mb-md-0">
                             <h3>Liên Kết</h3>
                             <ul class="list-unstyled">
-                                <li><a href="services.html">Dịch vụ</a></li>
-                                <li><a href="portfolio.html">Nhà tuyển dụng</a></li>
-                                <li><a href="testimonials.html">Đánh giá</a></li>
-                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="services.jsp">Dịch vụ</a></li>
+                                <li><a href="portfolio.jsp">Nhà tuyển dụng</a></li>
+                                <li><a href="testimonials.jsp">Đánh giá</a></li>
+                                <li><a href="blog.jsp">Blog</a></li>
                             </ul>
                         </div>
                         <div class="col-6 col-md-4 mb-4 mb-md-0">

@@ -1,11 +1,17 @@
+<%-- 
+    Document   : blog
+    Created on : Oct 28, 2020, 11:21:37 AM
+    Author     : Duong Nguyen
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Đăng nhập</title>
+        <title>Bài viết</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 
         <link rel="stylesheet" href="css/custom-bs.css">
         <link rel="stylesheet" href="css/jquery.fancybox.min.css">
@@ -18,7 +24,8 @@
 
 
         <!-- MAIN CSS -->
-        <link rel="stylesheet" href="css/style.css">    
+        <link rel="stylesheet" href="css/style.css">
+
     </head>
     <body id="top">
 
@@ -46,22 +53,22 @@
             <header class="site-navbar mt-3">
                 <div class="container-fluid">
                     <div class="row align-items-center">
-                        <div class="site-logo col-6"><a href="index.html">HappyJob</a></div>
+                        <div class="site-logo col-6"><a href="index.jsp">HappyJob</a></div>
 
                         <nav class="mx-auto site-navigation">
                             <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
-                                <li><a href="index.html" class="nav-link active">Trang chủ</a></li>
-                                <li><a href="services.html">Dịch vụ</a></li>
-                                <li><a href="portfolio.html">Nhà tuyển dụng</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contact.html">Liên hệ</a></li>
+                                <li><a href="index.jsp" class="nav-link active">Trang chủ</a></li>
+                                <li><a href="services.jsp">Dịch vụ</a></li>
+                                <li><a href="portfolio.jsp">Nhà tuyển dụng</a></li>
+                                <li><a href="blog.jsp">Blog</a></li>
+                                <li><a href="contact.jsp">Liên hệ</a></li>
                             </ul>
                         </nav>
 
                         <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
                             <div class="ml-auto">
-                                <a href="post-job.html" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Đăng tuyển</a>
-                                <a href="login.html" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-lock_outline"></span>Đăng nhập</a>
+                                <a href="post-job.jsp" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Đăng tuyển</a>
+                                <a href="login.jsp" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-lock_outline"></span>Đăng nhập</a>
                             </div>
                             <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
                         </div>
@@ -75,10 +82,10 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-7">
-                            <h1 class="text-white font-weight-bold">Đăng nhập/Đăng ký</h1>
+                            <h1 class="text-white font-weight-bold">Bài viết</h1>
                             <div class="custom-breadcrumbs">
-                                <a href="index.html">Trang chủ</a> <span class="mx-2 slash">/</span>
-                                <span class="text-white"><strong>Đăng nhập</strong></span>
+                                <a href="index.jsp">Trang chủ</a> <span class="mx-2 slash">/</span>
+                                <span class="text-white"><strong>Bài viết</strong></span>
                             </div>
                         </div>
                     </div>
@@ -87,64 +94,55 @@
 
             <section class="site-section">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 mb-5">
-                            <h2 class="mb-4">Đăng ký</h2>
-                            <form action="#" class="p-4 border rounded">
-
-                                <div class="row form-group">
-                                    <div class="col-md-12 mb-3 mb-md-0">
-                                        <label class="text-black" for="fname">Email</label>
-                                        <input type="text" id="fname" class="form-control" placeholder="Email address">
-                                    </div>
-                                </div>
-                                <div class="row form-group">
-                                    <div class="col-md-12 mb-3 mb-md-0">
-                                        <label class="text-black" for="fname">Mật khẩu</label>
-                                        <input type="password" id="fname" class="form-control" placeholder="Password">
-                                    </div>
-                                </div>
-                                <div class="row form-group mb-4">
-                                    <div class="col-md-12 mb-3 mb-md-0">
-                                        <label class="text-black" for="fname">Nhập lại mật khẩu</label>
-                                        <input type="password" id="fname" class="form-control" placeholder="Re-type Password">
-                                    </div>
-                                </div>
-
-                                <div class="row form-group">
-                                    <div class="col-md-12">
-                                        <input type="submit" value="Đăng ký" class="btn px-4 btn-primary text-white">
-                                    </div>
-                                </div>
-
-                            </form>
+                    
+                    <div class="row mb-5">
+                        <div class="col-md-6 col-lg-4 mb-5">
+                            <a href="blog-single.jsp"><img src="images/sq_img_1.jpg" alt="Image" class="img-fluid rounded mb-4"></a>
+                            <h3><a href="blog-single.jsp" class="text-black">5 yếu tố để lựa chọn giữa hai công việc</a></h3>
+                            <div>15 Thánh 4, 2020 <span class="mx-2">|</span> <a href="#">2 Bình luận</a></div>
                         </div>
-                        <div class="col-lg-6">
-                            <h2 class="mb-4">Đăng nhập</h2>
-                            <form action="#" class="p-4 border rounded">
-
-                                <div class="row form-group">
-                                    <div class="col-md-12 mb-3 mb-md-0">
-                                        <label class="text-black" for="fname">Email</label>
-                                        <input type="text" id="fname" class="form-control" placeholder="Email address">
-                                    </div>
-                                </div>
-                                <div class="row form-group mb-4">
-                                    <div class="col-md-12 mb-3 mb-md-0">
-                                        <label class="text-black" for="fname">Mật khẩu</label>
-                                        <input type="password" id="fname" class="form-control" placeholder="Password">
-                                    </div>
-                                </div>
-
-                                <div class="row form-group">
-                                    <div class="col-md-12">
-                                        <input type="submit" value="Đăng nhập" class="btn px-4 btn-primary text-white">
-                                    </div>
-                                </div>
-
-                            </form>
+                        <div class="col-md-6 col-lg-4 mb-5">
+                            <a href="blog-single.jsp"><img src="images/sq_img_2.jpg" alt="Image" class="img-fluid rounded mb-4"></a>
+                            <h3><a href="blog-single.jsp" class="text-black">Cách viết thư xin việc sáng tạo</a></h3>
+                            <div>15 Thánh 4, 2020<span class="mx-2">|</span> <a href="#">3 Bình luận</a></div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-5">
+                            <a href="blog-single.jsp"><img src="images/sq_img_4.jpg" alt="Image" class="img-fluid rounded mb-4"></a>
+                            <h3><a href="blog-single.jsp" class="text-black">Cách đúng đắn để bỏ một công việc bạn đã bắt đầu</a></h3>
+                            <div>9 Thánh 11, 2020<span class="mx-2">|</span> <a href="#">2 Bình luận</a></div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-5">
+                            <a href="blog-single.jsp"><img src="images/sq_img_7.jpg" alt="Image" class="img-fluid rounded mb-4"></a>
+                            <h3><a href="blog-single.jsp" class="text-black">Làm thế nào để viết một thư xin việc hoàn hảo?</a></h3>
+                            <div>15 Thánh 4, 2020 <span class="mx-2">|</span> <a href="#">3 Bình luận</a></div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-5">
+                            <a href="blog-single.jsp"><img src="images/sq_img_5.jpg" alt="Image" class="img-fluid rounded mb-4"></a>
+                            <h3><a href="blog-single.jsp" class="text-black">Cách viết thư xin việc sáng tạo</a></h3>
+                            <div>9 Thánh 11, 2020<span class="mx-2">|</span> <a href="#">3 Bình luận</a></div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-5">
+                            <a href="blog-single.jsp"><img src="images/sq_img_6.jpg" alt="Image" class="img-fluid rounded mb-4"></a>
+                            <h3><a href="blog-single.jsp" class="text-black">Cách đúng đắn để bỏ một công việc bạn đã bắt đầu</a></h3>
+                            <div>9 Thánh 11, 2020<span class="mx-2">|</span> <a href="#">3 Bình luận</a></div>
                         </div>
                     </div>
+                    <div class="row pagination-wrap mt-5">
+
+                        <div class="col-md-12 text-center ">
+                            <div class="custom-pagination ml-auto">
+                                <a href="#" class="prev">Trang trước</a>
+                                <div class="d-inline-block">
+                                    <a href="#" class="active">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                </div>
+                                <a href="#" class="next">Trang sau</a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
@@ -170,10 +168,10 @@
                         <div class="col-6 col-md-4 mb-4 mb-md-0">
                             <h3>Liên Kết</h3>
                             <ul class="list-unstyled">
-                                <li><a href="services.html">Dịch vụ</a></li>
-                                <li><a href="portfolio.html">Nhà tuyển dụng</a></li>
-                                <li><a href="testimonials.html">Đánh giá</a></li>
-                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="services.jsp">Dịch vụ</a></li>
+                                <li><a href="portfolio.jsp">Nhà tuyển dụng</a></li>
+                                <li><a href="testimonials.jsp">Đánh giá</a></li>
+                                <li><a href="blog.jsp">Blog</a></li>
                             </ul>
                         </div>
                         <div class="col-6 col-md-4 mb-4 mb-md-0">

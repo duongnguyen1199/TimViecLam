@@ -95,40 +95,9 @@
             <section class="site-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 mb-5">
-                            <h2 class="mb-4">Đăng ký</h2>
-                            <form action="#" class="p-4 border rounded">
-
-                                <div class="row form-group">
-                                    <div class="col-md-12 mb-3 mb-md-0">
-                                        <label class="text-black" for="fname">Email</label>
-                                        <input type="text" id="fname" class="form-control" placeholder="Email address">
-                                    </div>
-                                </div>
-                                <div class="row form-group">
-                                    <div class="col-md-12 mb-3 mb-md-0">
-                                        <label class="text-black" for="fname">Mật khẩu</label>
-                                        <input type="password" id="fname" class="form-control" placeholder="Password">
-                                    </div>
-                                </div>
-                                <div class="row form-group mb-4">
-                                    <div class="col-md-12 mb-3 mb-md-0">
-                                        <label class="text-black" for="fname">Nhập lại mật khẩu</label>
-                                        <input type="password" id="fname" class="form-control" placeholder="Re-type Password">
-                                    </div>
-                                </div>
-
-                                <div class="row form-group">
-                                    <div class="col-md-12">
-                                        <input type="submit" value="Đăng ký" class="btn px-4 btn-primary text-white">
-                                    </div>
-                                </div>
-
-                            </form>
-                        </div>
-                        <div class="col-lg-6">
-                            <h2 class="mb-4">Đăng nhập</h2>
-                            <form action="#" class="p-4 border rounded">
+                        <div class="col-lg-6" style="margin: auto">
+                            <h2 class="mb-4" style="text-align: center">Đăng nhập</h2>
+                            <form action="" class="p-4 border rounded">
 
                                 <div class="row form-group">
                                     <div class="col-md-12 mb-3 mb-md-0">
@@ -148,7 +117,6 @@
                                         <input type="submit" value="Đăng nhập" class="btn px-4 btn-primary text-white">
                                     </div>
                                 </div>
-
                             </form>
                         </div>
                     </div>

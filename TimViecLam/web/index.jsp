@@ -85,7 +85,7 @@
                     <div class="row align-items-center justify-content-center">
                         <div class="col-md-12">
                             <div class="mb-5 text-center">
-                                <h1 class="text-white font-weight-bold">Cách dễ dàng nhất để có được công việc mơ ước của bạn</h1> 
+                                <h1 class="text-white font-weight-bold">Happy Job - Happy Life</h1> 
                             </div>
                             <form method="post" class="search-jobs-form" action="recruitment.jsp">
                                 <div class="row mb-5">
@@ -188,7 +188,8 @@
                             <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
                                 <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
                                     <h2>Database Devs (sql, Oracle, Mysql)</h2>
-                                    <strong>Siêu Việt Group</strong>
+                                    <strong>Siêu Việt Group</strong><br>
+                                    <span class="icon-shopping-bag"></span> 5 triệu - 12 triệu
                                 </div>
                                 <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
                                     <span class="icon-room"></span> Hồ Chí Minh
@@ -343,7 +344,7 @@
                             <p class="mb-0 text-white lead">Lorem ipsum dolor sit amet consectetur adipisicing elit tempora adipisci impedit.</p>
                         </div>
                         <div class="col-md-3 ml-auto">
-                            <a href="#" class="btn btn-warning btn-block btn-lg">Đăng ký</a>
+                            <a href="login.jsp" class="btn btn-warning btn-block btn-lg">Đăng ký</a>
                         </div>
                     </div>
                 </div>

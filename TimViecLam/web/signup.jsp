@@ -1,6 +1,6 @@
 <%-- 
-    Document   : service-single
-    Created on : Oct 28, 2020, 11:26:35 AM
+    Document   : login
+    Created on : Oct 28, 2020, 11:23:55 AM
     Author     : Duong Nguyen
 --%>
 
@@ -9,7 +9,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Dịch vụ chi tiết</title>
+        <title>Đăng nhập</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -82,87 +82,95 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-7">
-                            <h1 class="text-white font-weight-bold">Giới thiệu dịch vụ</h1>
+                            <h1 class="text-white font-weight-bold">Đăng nhập/Đăng ký</h1>
                             <div class="custom-breadcrumbs">
                                 <a href="index.jsp">Trang chủ</a> <span class="mx-2 slash">/</span>
-                                <a href="services.jsp">Dịch vụ</a> <span class="mx-2 slash">/</span>
-                                <span class="text-white"><strong>Giới thiệu dịch vụ</strong></span>
+                                <span class="text-white"><strong>Đăng nhập</strong></span>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="site-section block__18514" id="next-section ">
+            <section class="site-section">
                 <div class="container" id="accordion">
-                    <div class="row" >
+                    <div class="row" style>
+                        <div style="width: 100%">
+                            <h2 class="mb-4" style="text-align: center">Đăng ký</h2>
+                        </div>
                         <div class="col-lg-3 mr-auto" >
                             <div class="border p-4 rounded">
                                 <ul class="list-unstyled block__47528 mb-0">
-                                    <li><a data-toggle="collapse" href="#collapseFive" role="button" aria-expanded="true" aria-controls="collapseFive">Thiết kế đồ họa</a></li>
-                                    <li><a data-toggle="collapse" href="#collapseSix" role="button" aria-expanded="false" aria-controls="collapseSix">Chiến lược tiếp thị</a></li>
-                                    <li><a data-toggle="collapse" href="#collapseSeven" role="button" aria-expanded="false" aria-controls="collapseSeven">Thiết kế web</a></li>
-                                    <li><a data-toggle="collapse" href="#collapseEight" role="button" aria-expanded="false" aria-controls="collapseEight">Tối ưu hóa công cụ tìm kiếm (SEO)</a></li>
-                                    <li><a data-toggle="collapse" href="#collapseNine" role="button" aria-expanded="false" aria-controls="collapseNine">Thiết kế Logo</a></li>
-                                    <li><a data-toggle="collapse" href="#collapseTen" role="button" aria-expanded="false" aria-controls="collapseTen">Bảo trì hệ thống</a></li>
+                                    <li><a data-toggle="collapse" href="#collapseFive" role="button" aria-expanded="true" aria-controls="collapseFive">Ứng viên</a></li>
+                                    <li><a data-toggle="collapse" href="#collapseSix" role="button" aria-expanded="false" aria-controls="collapseSix">Nhà tuyển dụng</a></li>
+
                                 </ul>
                             </div>
                         </div>
 
                         <div class="col-lg-8 collapse show" id="collapseFive" aria-labelledby="headingOne" data-parent="#accordion" style="">
-                            <span class="text-primary d-block mb-5"><span class="icon-magnet display-1"></span></span>
-                            <h2 class="mb-4">Thiết kế đồ họa</h2>
-                            <p>abc.</p>
-                            <p>abc.</p>
-                            <p>abc.</p>
-                            <p>abc.</p>
-                            <p><a href="#" class="btn btn-primary btn-md mt-4">Tìm hiểu thêm</a></p>
+                            <form action="#" class="p-4 border rounded">
+
+                                <div class="row form-group">
+                                    <div class="col-md-12 mb-3 mb-md-0">
+                                        <label class="text-black" for="fname">Email</label>
+                                        <input type="text" id="fname" class="form-control" placeholder="Email address">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12 mb-3 mb-md-0">
+                                        <label class="text-black" for="fname">Mật khẩu</label>
+                                        <input type="password" id="fname" class="form-control" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="row form-group mb-4">
+                                    <div class="col-md-12 mb-3 mb-md-0">
+                                        <label class="text-black" for="fname">Nhập lại mật khẩu</label>
+                                        <input type="password" id="fname" class="form-control" placeholder="Re-type Password">
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <input type="submit" value="Đăng ký" class="btn px-4 btn-primary text-white">
+                                    </div>
+                                </div>
+
+                            </form>
                         </div>
                         <div class="col-lg-8 collapse" id="collapseSix" aria-labelledby="headingOne" data-parent="#accordion" >
-                            <span class="text-primary d-block mb-5"><span class="icon-magnet display-1"></span></span>
-                            <h2 class="mb-4">Chiến lược tiếp thị</h2>
-                            <p>abc.</p>
-                            <p>abc.</p>
-                            <p>abc.</p>
-                            <p>abc.</p>
-                            <p><a href="#" class="btn btn-primary btn-md mt-4">Tìm hiểu thêm</a></p>
+                            <form action="#" class="p-4 border rounded">
+
+                                <div class="row form-group">
+                                    <div class="col-md-12 mb-3 mb-md-0">
+                                        <label class="text-black" for="fname">Email</label>
+                                        <input type="text" id="fname" class="form-control" placeholder="Email address">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12 mb-3 mb-md-0">
+                                        <label class="text-black" for="fname">Mật khẩu</label>
+                                        <input type="password" id="fname" class="form-control" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="row form-group mb-4">
+                                    <div class="col-md-12 mb-3 mb-md-0">
+                                        <label class="text-black" for="fname">Nhập lại mật khẩu</label>
+                                        <input type="password" id="fname" class="form-control" placeholder="Re-type Password">
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <input type="submit" value="Đăng ký" class="btn px-4 btn-primary text-white">
+                                    </div>
+                                </div>
+
+                            </form>
                         </div>
-                        <div class="col-lg-8 collapse" id="collapseSeven" aria-labelledby="headingOne" data-parent="#accordion" >
-                            <span class="text-primary d-block mb-5"><span class="icon-magnet display-1"></span></span>
-                            <h2 class="mb-4">Thiết kế web</h2>
-                            <p>abc.</p>
-                            <p>abc.</p>
-                            <p>abc.</p>
-                            <p>abc.</p>
-                            <p><a href="#" class="btn btn-primary btn-md mt-4">Tìm hiểu thêm</a></p>
-                        </div>
-                        <div class="col-lg-8 collapse" id="collapseEight" aria-labelledby="headingOne" data-parent="#accordion" >
-                            <span class="text-primary d-block mb-5"><span class="icon-magnet display-1"></span></span>
-                            <h2 class="mb-4">Tối ưu hóa công cụ tìm kiếm (SEO)</h2>
-                           <p>abc.</p>
-                            <p>abc.</p>
-                            <p>abc.</p>
-                            <p>abc.</p>
-                            <p><a href="#" class="btn btn-primary btn-md mt-4">Tìm hiểu thêm</a></p>
-                        </div>
-                        <div class="col-lg-8 collapse" id="collapseNine" aria-labelledby="headingOne" data-parent="#accordion" >
-                            <span class="text-primary d-block mb-5"><span class="icon-magnet display-1"></span></span>
-                            <h2 class="mb-4">Thiết kế Logo</h2>
-                            <p>abc.</p>
-                            <p>abc.</p>
-                            <p>abc.</p>
-                            <p>abc.</p>
-                            <p><a href="#" class="btn btn-primary btn-md mt-4">Tìm hiểu thêm</a></p>
-                        </div>
-                        <div class="col-lg-8 collapse" id="collapseTen" aria-labelledby="headingOne" data-parent="#accordion" >
-                            <span class="text-primary d-block mb-5"><span class="icon-magnet display-1"></span></span>
-                            <h2 class="mb-4">Bảo trì hệ thống</h2>
-                            <p>abc.</p>
-                            <p>abc.</p>
-                            <p>abc.</p>
-                            <p>abc.</p>
-                            <p><a href="#" class="btn btn-primary btn-md mt-4">Tìm hiểu thêm</a></p>
-                        </div>
+
+
+
                     </div>
                 </div>
             </section>

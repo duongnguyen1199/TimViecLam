@@ -82,10 +82,10 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-7">
-                            <h1 class="text-white font-weight-bold">Đăng nhập/Đăng ký</h1>
+                            <h1 class="text-white font-weight-bold">Đăng ký</h1>
                             <div class="custom-breadcrumbs">
                                 <a href="index.jsp">Trang chủ</a> <span class="mx-2 slash">/</span>
-                                <span class="text-white"><strong>Đăng nhập</strong></span>
+                                <span class="text-white"><strong>Đăng ký</strong></span>
                             </div>
                         </div>
                     </div>
@@ -110,7 +110,24 @@
 
                         <div class="col-lg-8 collapse show" id="collapseFive" aria-labelledby="headingOne" data-parent="#accordion" style="">
                             <form action="#" class="p-4 border rounded">
-
+                                <div class="row form-group">
+                                    <div class="col-md-12 mb-3 mb-md-0">
+                                        <label class="text-black" for="fname">Họ tên</label>
+                                        <input type="text" id="fname" class="form-control" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12 mb-3 mb-md-0">
+                                        <label class="text-black" for="fname">Địa chỉ</label>
+                                        <input type="text" id="fname" class="form-control" placeholder="Address">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12 mb-3 mb-md-0">
+                                        <label class="text-black" for="fname">Số điện thoại</label>
+                                        <input type="number" id="fname" class="form-control" placeholder="Number phone">
+                                    </div>
+                                </div>
                                 <div class="row form-group">
                                     <div class="col-md-12 mb-3 mb-md-0">
                                         <label class="text-black" for="fname">Email</label>
@@ -135,30 +152,76 @@
                                         <input type="submit" value="Đăng ký" class="btn px-4 btn-primary text-white">
                                     </div>
                                 </div>
-
-                            </form>
+                            </form>    
                         </div>
+
                         <div class="col-lg-8 collapse" id="collapseSix" aria-labelledby="headingOne" data-parent="#accordion" >
                             <form action="#" class="p-4 border rounded">
-
                                 <div class="row form-group">
                                     <div class="col-md-12 mb-3 mb-md-0">
-                                        <label class="text-black" for="fname">Email</label>
+                                        <label class="text-black" for="fname2">Email</label>
                                         <input type="text" id="fname" class="form-control" placeholder="Email address">
                                     </div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col-md-12 mb-3 mb-md-0">
-                                        <label class="text-black" for="fname">Mật khẩu</label>
+                                        <label class="text-black" for="fname2">Mật khẩu</label>
                                         <input type="password" id="fname" class="form-control" placeholder="Password">
                                     </div>
                                 </div>
                                 <div class="row form-group mb-4">
                                     <div class="col-md-12 mb-3 mb-md-0">
-                                        <label class="text-black" for="fname">Nhập lại mật khẩu</label>
+                                        <label class="text-black" for="fname2">Nhập lại mật khẩu</label>
                                         <input type="password" id="fname" class="form-control" placeholder="Re-type Password">
                                     </div>
                                 </div>
+                                <h3>Thông tin công ty</h3>
+                                <div class="row form-group">
+                                    <div class="col-md-12 mb-3 mb-md-0">
+                                        <label class="text-black" for="fname2">Tên người liên hệ</label>
+                                        <input type="text" id="fname" class="form-control" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12 mb-3 mb-md-0">
+                                        <label class="text-black" for="fname2">Số điện thoại liên hệ</label>
+                                        <input type="number" id="fname" class="form-control" placeholder="Number phone">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12 mb-3 mb-md-0">
+                                        <label class="text-black" for="fname2">Tên công ty</label>
+                                        <input type="text" id="fname" class="form-control" placeholder="Company name">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12 mb-3 mb-md-0">
+                                        <label class="text-black" for="fname2">Địa chỉ công ty</label>
+                                        <input type="text" id="fname" class="form-control" placeholder="Address">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12 mb-3 mb-md-0">
+                                        <label class="text-black" for="fname2">Quy mô nhân sự</label>
+                                        <select class="form-control selectpicker">
+                                            <option>Dưới 20 người</option>
+                                            <option>20 - 150 người</option>
+                                            <option>150 - 300 người</option>
+                                            <option>Trên 300 người</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12 mb-3 mb-md-0">
+                                        <label class="text-black" for="fname2">Tỉnh/thành phố</label>
+                                        <select class="form-control selectpicker">
+                                            <option>Hà Nội</option>
+                                            <option>Hồ Chí Minh</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                
 
                                 <div class="row form-group">
                                     <div class="col-md-12">
@@ -168,8 +231,6 @@
 
                             </form>
                         </div>
-
-
 
                     </div>
                 </div>

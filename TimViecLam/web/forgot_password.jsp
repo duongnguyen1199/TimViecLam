@@ -58,7 +58,7 @@
                         <nav class="mx-auto site-navigation">
                             <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
                                 <li><a href="index.jsp" class="nav-link active">Trang chủ</a></li>
-                                <li><a href="services.jsp">Dịch vụ</a></li>
+                                <li><a href="services.jsp" class="nav-link active">Dịch vụ</a></li>
                                 <li><a href="portfolio.jsp">Nhà tuyển dụng</a></li>
                                 <li><a href="blog.jsp">Blog</a></li>
                                 <li><a href="contact.jsp">Liên hệ</a></li>
@@ -82,10 +82,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-7">
-                            <h1 class="text-white font-weight-bold">Đăng nhập</h1>
+                            <h1 class="text-white font-weight-bold">Quên mật khẩu</h1>
                             <div class="custom-breadcrumbs">
                                 <a href="index.jsp">Trang chủ</a> <span class="mx-2 slash">/</span>
-                                <span class="text-white"><strong>Đăng nhập</strong></span>
+                                <a href="Đăng nhập">Đăng nhập</a> <span class="mx-2 slash">/</span>
+                                <span class="text-white"><strong>Quên mật khẩu</strong></span>
                             </div>
                         </div>
                     </div>
@@ -96,7 +97,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7" style="margin: auto">
-                            <h2 class="mb-4" style="text-align: center">Đăng nhập</h2>
+                            <h2 class="mb-4" style="text-align: center">Quên mật khẩu</h2>
                             <form action="" class="p-4 border rounded">
 
                                 <div class="row form-group">
@@ -105,24 +106,14 @@
                                         <input type="text" id="fname" class="form-control" placeholder="Email address">
                                     </div>
                                 </div>
-                                <div class="row form-group mb-4">
-                                    <div class="col-md-12 mb-3 mb-md-0">
-                                        <label class="text-black" for="fname">Mật khẩu</label>
-                                        <input type="password" id="fname" class="form-control" placeholder="Password">
-                                    </div>
-                                </div>
-
                                 <div class="row form-group">
                                     <div class="col-md-4">
-                                        <input type="submit" value="Đăng nhập" class="btn px-4 btn-primary text-white">
+                                        <input type="submit" value="Lấy lại mật khẩu" class="btn px-4 btn-primary text-white">
                                     </div>
                                     <div class="col-md-8" >
-                                        <span style="padding: 0 5px;">Chưa có tài khoản?</span>
-                                        <a href="signup.jsp">
-                                            <span class="el-text" style="padding: 0 5px;">Đăng ký</span>
-                                        </a>
-                                        <a href="forgot_password.jsp">
-                                            <span class="el-text" style="padding: 0 5px;">Quên mật khẩu ?</span>
+                                        <span style="padding: 0 5px;">Quay về trang</span>
+                                        <a href="login.jsp">
+                                            <span class="el-text" style="padding: 0 10px;">Đăng Nhập</span>
                                         </a>
                                     </div>
                                 </div>

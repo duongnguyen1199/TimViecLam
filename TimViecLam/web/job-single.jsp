@@ -111,7 +111,10 @@
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <div class="row">        
+                            <div class="row">    
+                                <div class="col-6">
+                                    <a href="#" class="btn btn-block btn-light btn-md"><span class="icon-heart-o mr-2 text-danger"></span>Save Job</a>
+                                </div>
                                 <div class="col-6">
                                     <a href="#" class="btn btn-block btn-primary btn-md">Ứng tuyển</a>
                                 </div>
@@ -167,6 +170,9 @@
                             </div>
 
                             <div class="row mb-5">
+                                <div class="col-6">
+                                    <a href="#" class="btn btn-block btn-light btn-md"><span class="icon-heart-o mr-2 text-danger"></span>Save Job</a>
+                                </div>
                                 <div class="col-6">
                                     <a href="#" class="btn btn-block btn-primary btn-md">Ứng tuyển</a>
                                 </div>

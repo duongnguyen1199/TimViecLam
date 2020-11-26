@@ -1,3 +1,10 @@
+<%-- 
+    Document   : user-changeAvt
+    Created on : Nov 25, 2020, 1:15:13 PM
+    Author     : Duong Nguyen
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -10,7 +17,7 @@
         <meta name="author" content="">
         <!-- Favicon icon -->
         
-        <title>Đổi mật khẩu</title>
+        <title>Đổi ảnh đại diện</title>
         <!-- Custom CSS -->
         <link rel="stylesheet" type="text/css" href="assets/libs/select2/dist/css/select2.min.css">
         <link rel="stylesheet" type="text/css" href="assets/libs/jquery-minicolors/jquery.minicolors.css">
@@ -30,21 +37,15 @@
         </div>
        
         <div id="main-wrapper">
-            
             <header class="topbar" data-navbarbg="skin5">
                 <nav class="navbar top-navbar navbar-expand-md navbar-dark">
                     <div class="navbar-header" data-logobg="skin5">
-                        <!-- This is for the sidebar toggle which is visible on mobile only -->
                         <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
-
                         <a class="navbar-brand" href="index.html" style="background-color: #89ba16;">
                             <div class="site-logo col-12 text-center" style="color: #fff;font-size: 1.5rem;letter-spacing: .2rem;text-transform: uppercase;">HappyJob</div>
                         </a>
-
                         <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="ti-more"></i></a>
                     </div>
-
-
 
                     <div class="navbar-collapse collapse"  data-navbarbg="skin5" style="margin: auto; flex-grow: 0">
                         <div class="navbar-nav ">
@@ -59,7 +60,7 @@
                     </div>
                 </nav>
             </header>
-            
+           
             <aside class="left-sidebar" data-sidebarbg="skin5">
 
                 <!-- Sidebar scroll-->
@@ -89,9 +90,8 @@
                 </div>
                 <!-- End Sidebar scroll-->
             </aside>
-            
+
             <div class="page-wrapper">
-               
                 <div class="page-breadcrumb">
                     <div class="row">
                         <div class="col-12 d-flex no-block align-items-center">
@@ -99,7 +99,7 @@
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                                        <li class="breadcrumb-item active" >Đổi mật khẩu</li>
+                                        <li class="breadcrumb-item active" >Đổi ảnh đại diện</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -115,27 +115,15 @@
                                     <div class="card-body">
                                         <h4 class="card-title">Đổi mật khẩu</h4>
                                         <div class="form-group row">
-                                            <label for="loldpass" class="col-sm-3 text-right control-label col-form-label">Mật khẩu cũ</label>
+                                            <label for="limg" class="col-sm-3 text-right control-label col-form-label">Ảnh đại diện mới</label>
                                             <div class="col-sm-9">
-                                                <input type="password" class="form-control" id="loldpass" placeholder="">
+                                                <input type="file" multiple accept='image/*' class="form-control" id="limg" placeholder="chọn">
                                             </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="lnewpass" class="col-sm-3 text-right control-label col-form-label">Mật khẩu mới</label>
-                                            <div class="col-sm-9">
-                                                <input name="password" type="password" class="required form-control" id="lnewpass" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="lpass" class="col-sm-3 text-right control-label col-form-label">Nhập lại mật khẩu</label>
-                                            <div class="col-sm-9">
-                                                <input id="lpass" name="confirm" type="password" class="required form-control" placeholder="">
-                                            </div>
-                                        </div>
+                                        </div>                
                                     </div>
                                     <div class="border-top">
                                         <div class="card-body">
-                                            <button type="button" class="btn btn-success">Đổi mật khẩu</button>
+                                            <button type="button" class="btn btn-success">Đổi ảnh đại diện</button>
                                         </div>
                                     </div>
                                 </form>
@@ -145,11 +133,8 @@
                 </div>
 
                 <footer class="footer text-center">
-
                 </footer>
-
             </div>
-
         </div>
 
         <script src="assets/libs/jquery/dist/jquery.min.js"></script>
@@ -210,8 +195,5 @@
             });
 
         </script>     
-       
-
     </body>
-
 </html>

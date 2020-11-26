@@ -1,3 +1,10 @@
+<%-- 
+    Document   : employer-infoUser
+    Created on : Nov 25, 2020, 1:13:48 PM
+    Author     : Duong Nguyen
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 

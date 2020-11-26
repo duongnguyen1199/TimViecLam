@@ -1,3 +1,10 @@
+<%-- 
+    Document   : admin-managePostBlog
+    Created on : Nov 25, 2020, 1:12:27 PM
+    Author     : Duong Nguyen
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -9,11 +16,13 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <!-- Favicon icon -->
-        
+
         <title>Danh sách tin tuyển dụng</title>
         <!-- Custom CSS -->
-        <link rel="stylesheet" type="text/css" href="assets/extra-libs/multicheck/multicheck.css">
-        <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="assets/libs/select2/dist/css/select2.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/libs/jquery-minicolors/jquery.minicolors.css">
+        <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/libs/quill/dist/quill.snow.css">
         <link href="dist/css/style.min.css" rel="stylesheet">
 
 
@@ -21,10 +30,10 @@
 
     <body>
 
-        <div id="overlayer"></div>
-        <div class="loader">
-            <div class="spinner-border text-primary" role="status">
-                <span class="sr-only">Loading...</span>
+        <div class="preloader">
+            <div class="lds-ripple">
+                <div class="lds-pos"></div>
+                <div class="lds-pos"></div>
             </div>
         </div>
         <!-- ============================================================== -->
@@ -75,27 +84,17 @@
                     <!-- Sidebar navigation-->
                     <nav class="sidebar-nav">
                         <ul id="sidebarnav" class="p-t-30">
-                            <li class="sidebar-item" style="text-align: center"> <a class="nav-link text-muted waves-effect waves-dark pro-pic" style="padding-bottom: 20px" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31">   Nguyễn Hữu Dương</a>
-
-                            <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Quản lý việc làm </span></a>
+                            <li class="sidebar-item" style="text-align: center"> <a class="nav-link text-muted waves-effect waves-dark pro-pic" style="padding-bottom: 20px" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31">   Nguyễn Hữu Dương</a></li>
+                            <li class="sidebar-item "> <a class="sidebar-link waves-effect waves-dark sidebar-link " href="admin-index.jsp" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
+                            <li class="sidebar-item "> <a class="sidebar-link waves-effect waves-dark sidebar-link " href="admin-manageUser.jsp" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Quản lý ứng viên</span></a></li>
+                            <li class="sidebar-item "> <a class="sidebar-link waves-effect waves-dark sidebar-link " href="admin-manageEmployer.jsp" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Quản lý nhà tuyển dụng</span></a></li>
+                            <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Quản lý bài viết </span></a>
                                 <ul aria-expanded="false" class="collapse  first-level">
-                                    <li class="sidebar-item"><a href="employer-post.html" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Đăng tuyển dụng mới </span></a></li>
-                                    <li class="sidebar-item"><a href="employer-listPost.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Tất cả tin tuyển dụng </span></a></li>
+                                    <li class="sidebar-item"><a href="admin-managePostBlog.jsp" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Đăng bài viết </span></a></li>
+                                    <li class="sidebar-item"><a href="admin-manageBlog.jsp" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh sách bài viết </span></a></li>
                                 </ul>
                             </li>
-                            <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Quản lý hồ sơ </span></a>
-                                <ul aria-expanded="false" class="collapse  first-level">
-                                    <li class="sidebar-item"><a href="employer-savedFile.html" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Hồ sơ đã lưu </span></a></li>
-                                    <li class="sidebar-item"><a href="employer-passFile.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Hồ sơ úng tuyển </span></a></li>
-                                </ul>
-                            </li>
-                            <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Thông tin công ty </span></a>
-                                <ul aria-expanded="false" class="collapse  first-level">
-                                    <li class="sidebar-item"><a href="employer-info.html" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Cập nhật thông tin </span></a></li>
-                                    <li class="sidebar-item"><a href="employer-changePassword.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Đổi mật khẩu </span></a></li>
-                                    <li class="sidebar-item"><a href="employer-changeAvt.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Đổi ảnh đại diện </span></a></li>
-                                </ul>
-                            </li>
+                            <li class="sidebar-item "> <a class="sidebar-link waves-effect waves-dark sidebar-link " href="admin-statistical.jsp" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Thống kê</span></a></li>
                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../index.jsp" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu">Đăng xuất</span></a></li>
                         </ul>
                     </nav>
@@ -120,7 +119,7 @@
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                                        <li class="breadcrumb-item active" >Danh sách tin tuyển dụng</li>
+                                        <li class="breadcrumb-item active" >Danh sách ứng viên</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -129,42 +128,25 @@
                 </div>
 
                 <div class="container-fluid">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table id="zero_config" class="table table-striped table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th>Họ tên</th>
-                                            <th>Ghi chú</th>
-                                            <th>Vị trí</th>
-                                            <th>Ngày lưu</th>
-                                            <th>Hành động</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Nguyễn Hữu Dương</td>
-                                            <td>Có kinh nghiệm...</td>
-                                            
-                                            <td>Kỹ sư Back-end (Python)</td>
-                                            <td>2/9/2020</td>
-                                            <td><button type="button" class="btn btn-success btn-sm">Xóa</button> 
-                                                <button type="button" class="btn btn-success btn-sm">Ứng tuyển</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Nguyễn Văn A</td>
-                                            <td>Có kinh nghiệm...</td>
-                                            <td>Kỹ sư Font-end</td>
-                                            <td>2/9/2020</td>
-                                            <td><button type="button" class="btn btn-success btn-sm">Xóa</button>
-                                                <button type="button" class="btn btn-success btn-sm">Ứng tuyển</button></td>
-                                        </tr>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title" style="color: #89ba16; font-weight: 700;text-align: center">Bài viết</h3>
+                                    
+                                    <input type="text" class="form-control" id="loldpass" placeholder="Tiêu đề" style="font-size: 20px; margin-bottom: 15px">
+                                    
+                                    <!-- Create the editor container -->
+                                    <div id="editor" style="min-height: 300px;">
                                         
-                                    </tbody>
-                                </table>
+                                    </div>
+                                    <div class="border-top">
+                                        <div class="card-body" style="text-align: center">
+                                            <button type="button" class="btn btn-success">Đăng bài viết</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -190,20 +172,63 @@
         <script src="dist/js/sidebarmenu.js"></script>
         <!--Custom JavaScript -->
         <script src="dist/js/custom.min.js"></script>
-        <!-- this page js -->
-        <script src="assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
-        <script src="assets/extra-libs/multicheck/jquery.multicheck.js"></script>
-        <script src="assets/extra-libs/DataTables/datatables.min.js"></script>
+        <!-- This Page JS -->
+        <script src="assets/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+        <script src="dist/js/pages/mask/mask.init.js"></script>
+        <script src="assets/libs/select2/dist/js/select2.full.min.js"></script>
+        <script src="assets/libs/select2/dist/js/select2.min.js"></script>
+        <script src="assets/libs/jquery-asColor/dist/jquery-asColor.min.js"></script>
+        <script src="assets/libs/jquery-asGradient/dist/jquery-asGradient.js"></script>
+        <script src="assets/libs/jquery-asColorPicker/dist/jquery-asColorPicker.min.js"></script>
+        <script src="assets/libs/jquery-minicolors/jquery.minicolors.min.js"></script>
+        <script src="assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+        <script src="assets/libs/quill/dist/quill.min.js"></script>
         <script>
-            /****************************************
-             *       Basic Table                   *
-             ****************************************/
-            $('#zero_config').DataTable();
+            //***********************************//
+            // For select 2
+            //***********************************//
+            $(".select2").select2();
 
-            
+            /*colorpicker*/
+            $('.demo').each(function () {
+                //
+                // Dear reader, it's actually very easy to initialize MiniColors. For example:
+                //
+                //  $(selector).minicolors();
+                //
+                // The way I've done it below is just for the demo, so don't get confused
+                // by it. Also, data- attributes aren't supported at this time...they're
+                // only used for this demo.
+                //
+                $(this).minicolors({
+                    control: $(this).attr('data-control') || 'hue',
+                    position: $(this).attr('data-position') || 'bottom left',
+
+                    change: function (value, opacity) {
+                        if (!value)
+                            return;
+                        if (opacity)
+                            value += ', ' + opacity;
+                        if (typeof console === 'object') {
+                            console.log(value);
+                        }
+                    },
+                    theme: 'bootstrap'
+                });
+
+            });
+            /*datwpicker*/
+            jQuery('.mydatepicker').datepicker();
+            jQuery('#datepicker-autoclose').datepicker({
+                autoclose: true,
+                todayHighlight: true
+            });
+            var quill = new Quill('#editor', {
+                theme: 'snow'
+            });
+
         </script>
 
     </body>
 
 </html>
-

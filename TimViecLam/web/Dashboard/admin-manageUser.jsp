@@ -1,3 +1,10 @@
+<%-- 
+    Document   : admin-manageUser
+    Created on : Nov 25, 2020, 1:12:43 PM
+    Author     : Duong Nguyen
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -9,8 +16,8 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <!-- Favicon icon -->
-        
-        <title>Danh sách việc làm đã ứng tuyển</title>
+
+        <title>Danh sách tin tuyển dụng</title>
         <!-- Custom CSS -->
         <link rel="stylesheet" type="text/css" href="assets/extra-libs/multicheck/multicheck.css">
         <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
@@ -21,10 +28,10 @@
 
     <body>
 
-        <div id="overlayer"></div>
-        <div class="loader">
-            <div class="spinner-border text-primary" role="status">
-                <span class="sr-only">Loading...</span>
+        <div class="preloader">
+            <div class="lds-ripple">
+                <div class="lds-pos"></div>
+                <div class="lds-pos"></div>
             </div>
         </div>
         <!-- ============================================================== -->
@@ -75,21 +82,17 @@
                     <!-- Sidebar navigation-->
                     <nav class="sidebar-nav">
                         <ul id="sidebarnav" class="p-t-30">
-                            <li class="sidebar-item" style="text-align: center"> <a class="nav-link text-muted waves-effect waves-dark pro-pic" style="padding-bottom: 20px" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31">   Nguyễn Hữu Dương</a>
-
-                            <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Quản lý việc làm </span></a>
+                            <li class="sidebar-item" style="text-align: center"> <a class="nav-link text-muted waves-effect waves-dark pro-pic" style="padding-bottom: 20px" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31">   Nguyễn Hữu Dương</a></li>
+                            <li class="sidebar-item "> <a class="sidebar-link waves-effect waves-dark sidebar-link " href="admin-index.jsp" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
+                            <li class="sidebar-item "> <a class="sidebar-link waves-effect waves-dark sidebar-link " href="admin-manageUser.jsp" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Quản lý ứng viên</span></a></li>
+                            <li class="sidebar-item "> <a class="sidebar-link waves-effect waves-dark sidebar-link " href="admin-manageEmployer.jsp" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Quản lý nhà tuyển dụng</span></a></li>
+                            <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Quản lý bài viết </span></a>
                                 <ul aria-expanded="false" class="collapse  first-level">
-                                    <li class="sidebar-item"><a href="user-applied.html" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Việc làm đã ứng tuyển </span></a></li>
-                                    <li class="sidebar-item"><a href="user-saved.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Việc làm đã lưu </span></a></li>
+                                    <li class="sidebar-item"><a href="admin-managePostBlog.jsp" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Đăng bài viết </span></a></li>
+                                    <li class="sidebar-item"><a href="admin-manageBlog.jsp" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh sách bài viết </span></a></li>
                                 </ul>
                             </li>
-                            <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Quản lý tài khoản </span></a>
-                                <ul aria-expanded="false" class="collapse  first-level">
-                                    <li class="sidebar-item"><a href="user-info.html" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Cập nhật thông tin </span></a></li>
-                                    <li class="sidebar-item"><a href="user-changePassword.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Đổi mật khẩu </span></a></li>
-                                    <li class="sidebar-item"><a href="user-changeAvt.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Đổi ảnh đại diện </span></a></li>
-                                </ul>
-                            </li>
+                            <li class="sidebar-item "> <a class="sidebar-link waves-effect waves-dark sidebar-link " href="admin-statistical.jsp" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Thống kê</span></a></li>
                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../index.jsp" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu">Đăng xuất</span></a></li>
                         </ul>
                     </nav>
@@ -114,7 +117,7 @@
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                                        <li class="breadcrumb-item active" >Danh sách việc làm đã ứng tuyển</li>
+                                        <li class="breadcrumb-item active" >Danh sách ứng viên</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -125,39 +128,52 @@
                 <div class="container-fluid">
                     <div class="card">
                         <div class="card-body">
+
                             <div class="table-responsive">
                                 <table id="zero_config" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
-                                            <th>Vị trí</th>
-                                            <th>Công ty</th>
-                                            <th>Mức lương</th>
-                                            <th>Ngày ứng tuyển</th>
-                                            <th>Trạn thái</th>
-                                            <th>Ghi chú</th>
+
+                                            <th>Mã ứng viên</th>
+                                            <th>Tên ứng viên</th>
+                                            <th>Số điện thoại</th>
+                                            <th>Email</th>
+                                            <th>Địa chỉ</th>
+                                            <th>Tên tài khoản</th>
+                                            <th>Xóa</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>Kỹ sư Front-end</td>
-                                            <td>FPT Software</td>
-                                            <td>10 triệu - 15 triệu</td>
-                                            <td>2/10/2020</td>
-                                            <td>Duyệt</td>
-                                            <td></td>
+
+                                            <td>US001</td>
+                                            <td> Nguyễn Hữu Dương </td>
+                                            <td>0987654321</td>
+                                            <td>abc@gmail.com</td>
+                                            <td>Bình Dương</td>
+                                            <td>abcdef</td>
+                                            <td><button type="button" class="btn btn-success btn-sm">Xóa</button></td>
                                         </tr>
                                         <tr>
-                                            <td>Kỹ sư Back-end (Python)</td>
-                                            <td>Công Ty TNHH Sài Gòn BPO</td>
-                                            <td>8 triệu - 11 triệu</td>
-                                            <td>2/10/2020</td>
-                                            <td>Chưa duyệt</td>
-                                            <td></td>
+
+                                            <td>US002</td>
+                                            <td> Nguyễn Văn A </td>
+                                            <td>0987654321</td>
+                                            <td>abc@gmail.com</td>
+                                            <td>Bình Dương</td>
+                                            <td>abcdefg</td>
+                                            <td><button type="button" class="btn btn-success btn-sm">Xóa</button></td>
                                         </tr>
-
-
+                                        <tr>
+                                            <td>US003</td>
+                                            <td> Nguyễn Văn B </td>
+                                            <td>0987654321</td>
+                                            <td>abc@gmail.com</td>
+                                            <td>Bình Dương</td>
+                                            <td>abcdefh</td>
+                                            <td><button type="button" class="btn btn-success btn-sm">Xóa</button></td>
+                                        </tr>
                                     </tbody>
-
                                 </table>
                             </div>
 
@@ -195,6 +211,8 @@
              *       Basic Table                   *
              ****************************************/
             $('#zero_config').DataTable();
+
+
         </script>
 
     </body>

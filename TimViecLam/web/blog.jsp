@@ -67,7 +67,7 @@
 
                         <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
                             <div class="ml-auto">
-                                <a href="post-job.jsp" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Đăng tuyển</a>
+                                <a href="signup.jsp" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Đăng ký</a>
                                 <a href="login.jsp" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-lock_outline"></span>Đăng nhập</a>
                             </div>
                             <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
@@ -92,39 +92,55 @@
                 </div>
             </section>
 
-            <section class="site-section">
+            <section class="site-section block__62272" id="next-section">
+
+
                 <div class="container">
-                    
-                    <div class="row mb-5">
-                        <div class="col-md-6 col-lg-4 mb-5">
+
+
+                    <div class="row justify-content-center mb-5" data-aos="fade-up">
+                        <div id="filters" class="filters text-center button-group col-md-7">
+                            <button class="btn btn-primary active" data-filter="*">Tất cả</button>
+                            <button class="btn btn-primary" data-filter=".news">Tin tức</button>
+                            <button class="btn btn-primary" data-filter=".aandq">Hỏi đáp</button>
+                            <button class="btn btn-primary" data-filter=".design">Thiết kế</button>
+                        </div>
+                    </div>  
+
+                    <div id="posts" class="row no-gutter">
+                        <div class="item news col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
                             <a href="blog-single.jsp"><img src="images/sq_img_1.jpg" alt="Image" class="img-fluid rounded mb-4"></a>
                             <h3><a href="blog-single.jsp" class="text-black">5 yếu tố để lựa chọn giữa hai công việc</a></h3>
-                            <div>15 Thánh 4, 2020 <span class="mx-2">|</span> <a href="#">2 Bình luận</a></div>
+                            <div style="display: flex">15 Thánh 4, 2020 <span class="mx-2">|</span> <a href="#">2 Bình luận</a></div>
                         </div>
-                        <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="item news col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
                             <a href="blog-single.jsp"><img src="images/sq_img_2.jpg" alt="Image" class="img-fluid rounded mb-4"></a>
                             <h3><a href="blog-single.jsp" class="text-black">Cách viết thư xin việc sáng tạo</a></h3>
-                            <div>15 Thánh 4, 2020<span class="mx-2">|</span> <a href="#">3 Bình luận</a></div>
+                            <div style="display: flex">15 Thánh 4, 2020<span class="mx-2">|</span> <a href="#">3 Bình luận</a></div>
                         </div>
-                        <div class="col-md-6 col-lg-4 mb-5">
+
+                        <div class="item aandq col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
                             <a href="blog-single.jsp"><img src="images/sq_img_4.jpg" alt="Image" class="img-fluid rounded mb-4"></a>
                             <h3><a href="blog-single.jsp" class="text-black">Cách đúng đắn để bỏ một công việc bạn đã bắt đầu</a></h3>
-                            <div>9 Thánh 11, 2020<span class="mx-2">|</span> <a href="#">2 Bình luận</a></div>
+                            <div style="display: flex">9 Thánh 11, 2020<span class="mx-2">|</span> <a href="#">2 Bình luận</a></div>
                         </div>
-                        <div class="col-md-6 col-lg-4 mb-5">
+
+                        <div class="item design col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
                             <a href="blog-single.jsp"><img src="images/sq_img_7.jpg" alt="Image" class="img-fluid rounded mb-4"></a>
                             <h3><a href="blog-single.jsp" class="text-black">Làm thế nào để viết một thư xin việc hoàn hảo?</a></h3>
-                            <div>15 Thánh 4, 2020 <span class="mx-2">|</span> <a href="#">3 Bình luận</a></div>
+                            <div style="display: flex">15 Thánh 4, 2020 <span class="mx-2">|</span> <a href="#">3 Bình luận</a></div>
                         </div>
-                        <div class="col-md-6 col-lg-4 mb-5">
+
+                        <div class="item news col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
                             <a href="blog-single.jsp"><img src="images/sq_img_5.jpg" alt="Image" class="img-fluid rounded mb-4"></a>
                             <h3><a href="blog-single.jsp" class="text-black">Cách viết thư xin việc sáng tạo</a></h3>
-                            <div>9 Thánh 11, 2020<span class="mx-2">|</span> <a href="#">3 Bình luận</a></div>
+                            <div style="display: flex">9 Thánh 11, 2020<span class="mx-2">|</span> <a href="#">3 Bình luận</a></div>
                         </div>
-                        <div class="col-md-6 col-lg-4 mb-5">
+
+                        <div class="item aandq col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
                             <a href="blog-single.jsp"><img src="images/sq_img_6.jpg" alt="Image" class="img-fluid rounded mb-4"></a>
                             <h3><a href="blog-single.jsp" class="text-black">Cách đúng đắn để bỏ một công việc bạn đã bắt đầu</a></h3>
-                            <div>9 Thánh 11, 2020<span class="mx-2">|</span> <a href="#">3 Bình luận</a></div>
+                            <div style="display: flex">9 Thánh 11, 2020<span class="mx-2">|</span> <a href="#">3 Bình luận</a></div>
                         </div>
                     </div>
                     <div class="row pagination-wrap mt-5">
@@ -142,8 +158,8 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
+
             </section>
 
             <footer class="site-footer">

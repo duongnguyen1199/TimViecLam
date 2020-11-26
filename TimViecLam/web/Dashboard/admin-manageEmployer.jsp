@@ -1,3 +1,10 @@
+<%-- 
+    Document   : admin-manageEmployer
+    Created on : Nov 25, 2020, 1:12:13 PM
+    Author     : Duong Nguyen
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -9,7 +16,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <!-- Favicon icon -->
-        
+
         <title>Danh sách tin tuyển dụng</title>
         <!-- Custom CSS -->
         <link rel="stylesheet" type="text/css" href="assets/extra-libs/multicheck/multicheck.css">
@@ -21,10 +28,10 @@
 
     <body>
 
-        <div id="overlayer"></div>
-        <div class="loader">
-            <div class="spinner-border text-primary" role="status">
-                <span class="sr-only">Loading...</span>
+        <div class="preloader">
+            <div class="lds-ripple">
+                <div class="lds-pos"></div>
+                <div class="lds-pos"></div>
             </div>
         </div>
         <!-- ============================================================== -->
@@ -40,7 +47,7 @@
                         <!-- This is for the sidebar toggle which is visible on mobile only -->
                         <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
 
-                        <a class="navbar-brand" href="index.html" style="background-color: #89ba16;">
+                        <a class="navbar-brand" href="../index.jsp" style="background-color: #89ba16;">
                             <div class="site-logo col-12 text-center" style="color: #fff;font-size: 1.5rem;letter-spacing: .2rem;text-transform: uppercase;">HappyJob</div>
                         </a>
 
@@ -75,27 +82,17 @@
                     <!-- Sidebar navigation-->
                     <nav class="sidebar-nav">
                         <ul id="sidebarnav" class="p-t-30">
-                            <li class="sidebar-item" style="text-align: center"> <a class="nav-link text-muted waves-effect waves-dark pro-pic" style="padding-bottom: 20px" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31">   Nguyễn Hữu Dương</a>
-
-                            <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Quản lý việc làm </span></a>
+                            <li class="sidebar-item" style="text-align: center"> <a class="nav-link text-muted waves-effect waves-dark pro-pic" style="padding-bottom: 20px" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31">   Nguyễn Hữu Dương</a></li>
+                            <li class="sidebar-item "> <a class="sidebar-link waves-effect waves-dark sidebar-link " href="admin-index.jsp" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
+                            <li class="sidebar-item "> <a class="sidebar-link waves-effect waves-dark sidebar-link " href="admin-manageUser.jsp" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Quản lý ứng viên</span></a></li>
+                            <li class="sidebar-item "> <a class="sidebar-link waves-effect waves-dark sidebar-link " href="admin-manageEmployer.jsp" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Quản lý nhà tuyển dụng</span></a></li>
+                            <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Quản lý bài viết </span></a>
                                 <ul aria-expanded="false" class="collapse  first-level">
-                                    <li class="sidebar-item"><a href="employer-post.html" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Đăng tuyển dụng mới </span></a></li>
-                                    <li class="sidebar-item"><a href="employer-listPost.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Tất cả tin tuyển dụng </span></a></li>
+                                    <li class="sidebar-item"><a href="admin-managePostBlog.jsp" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Đăng bài viết </span></a></li>
+                                    <li class="sidebar-item"><a href="admin-manageBlog.jsp" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh sách bài viết </span></a></li>
                                 </ul>
                             </li>
-                            <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Quản lý hồ sơ </span></a>
-                                <ul aria-expanded="false" class="collapse  first-level">
-                                    <li class="sidebar-item"><a href="employer-savedFile.html" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Hồ sơ đã lưu </span></a></li>
-                                    <li class="sidebar-item"><a href="employer-passFile.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Hồ sơ úng tuyển </span></a></li>
-                                </ul>
-                            </li>
-                            <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Thông tin công ty </span></a>
-                                <ul aria-expanded="false" class="collapse  first-level">
-                                    <li class="sidebar-item"><a href="employer-info.html" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Cập nhật thông tin </span></a></li>
-                                    <li class="sidebar-item"><a href="employer-changePassword.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Đổi mật khẩu </span></a></li>
-                                    <li class="sidebar-item"><a href="employer-changeAvt.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Đổi ảnh đại diện </span></a></li>
-                                </ul>
-                            </li>
+                            <li class="sidebar-item "> <a class="sidebar-link waves-effect waves-dark sidebar-link " href="admin-statistical.jsp" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Thống kê</span></a></li>
                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../index.jsp" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu">Đăng xuất</span></a></li>
                         </ul>
                     </nav>
@@ -120,7 +117,7 @@
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                                        <li class="breadcrumb-item active" >Danh sách tin tuyển dụng</li>
+                                        <li class="breadcrumb-item active" >Danh sách ứng viên</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -136,36 +133,44 @@
                                 <table id="zero_config" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
-                                            <th>Vị trí tuyển dụng</th>
-                                            <th>Danh sách ứng viên</th>
-                                            <th>Trạng thái</th>
-                                            <th>Hạn nộp hồ sơ</th>
+
+                                            <th>Mã công ty</th>
+                                            <th>Tên công ty</th>
+                                            <th>Số điện thoại</th>
+                                            <th>Website</th>
+                                            <th>Địa chỉ</th>
+                                            <th>Tên tài khoản</th>
                                             <th>Xóa</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>Kỹ sư Front-end</td>
-                                            <td>
-                                                <div><button type="button" class="btn btn-success btn-sm" data-toggle="collapse" data-target="#collapse_0" aria-expanded="false">Xem danh sách</button></div>
 
-                                                <div class="collapse" id="collapse_0" role="dialog">
-                                                    <div style="padding-top: 15px">
-                                                        <span><a>1. Nguyễn Hữu Dương</a></span>
-                                                        <span>2. Nguyễn Hữu Dương</span>
-                                                        <span>3. Nguyễn Hữu Dương</span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>3/10</td>
-                                            <td>2/9/2020</td>
+                                            <td>EP001</td>
+                                            <td> FPT Sofware </td>
+                                            <td>0987654321</td>
+                                            <td>fptsofware@gmail.com</td>
+                                            <td>Hồ Chí Minh</td>
+                                            <td>abcdef</td>
                                             <td><button type="button" class="btn btn-success btn-sm">Xóa</button></td>
                                         </tr>
                                         <tr>
-                                            <td>Kỹ sư Back-end (Python)</td>
-                                            <td><button type="button" class="btn btn-success btn-sm">Xem danh sách</button></td>
-                                            <td>2/5</td>
-                                            <td>2/9/2020</td>
+
+                                            <td>EP002</td>
+                                            <td> ABC </td>
+                                            <td>0987654321</td>
+                                            <td>abc@gmail.com</td>
+                                            <td>Bình Dương</td>
+                                            <td>abcdefg</td>
+                                            <td><button type="button" class="btn btn-success btn-sm">Xóa</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>EP003</td>
+                                            <td> ACB </td>
+                                            <td>0987654321</td>
+                                            <td>acb@gmail.com</td>
+                                            <td>Bình Dương</td>
+                                            <td>abcdefh</td>
                                             <td><button type="button" class="btn btn-success btn-sm">Xóa</button></td>
                                         </tr>
                                     </tbody>
@@ -207,7 +212,7 @@
              ****************************************/
             $('#zero_config').DataTable();
 
-            
+
         </script>
 
     </body>

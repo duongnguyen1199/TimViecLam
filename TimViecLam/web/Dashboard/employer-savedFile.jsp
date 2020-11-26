@@ -1,3 +1,10 @@
+<%-- 
+    Document   : employer-savedFile
+    Created on : Nov 25, 2020, 1:14:46 PM
+    Author     : Duong Nguyen
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -10,7 +17,7 @@
         <meta name="author" content="">
         <!-- Favicon icon -->
         
-        <title>Danh sách việc làm đã lưu</title>
+        <title>Danh sách tin tuyển dụng</title>
         <!-- Custom CSS -->
         <link rel="stylesheet" type="text/css" href="assets/extra-libs/multicheck/multicheck.css">
         <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
@@ -79,15 +86,21 @@
 
                             <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Quản lý việc làm </span></a>
                                 <ul aria-expanded="false" class="collapse  first-level">
-                                    <li class="sidebar-item"><a href="user-applied.html" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Việc làm đã ứng tuyển </span></a></li>
-                                    <li class="sidebar-item"><a href="user-saved.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Việc làm đã lưu </span></a></li>
+                                    <li class="sidebar-item"><a href="employer-post.html" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Đăng tuyển dụng mới </span></a></li>
+                                    <li class="sidebar-item"><a href="employer-listPost.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Tất cả tin tuyển dụng </span></a></li>
                                 </ul>
                             </li>
-                            <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Quản lý tài khoản </span></a>
+                            <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Quản lý hồ sơ </span></a>
                                 <ul aria-expanded="false" class="collapse  first-level">
-                                    <li class="sidebar-item"><a href="user-info.html" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Cập nhật thông tin </span></a></li>
-                                    <li class="sidebar-item"><a href="user-changePassword.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Đổi mật khẩu </span></a></li>
-                                    <li class="sidebar-item"><a href="user-changeAvt.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Đổi ảnh đại diện </span></a></li>
+                                    <li class="sidebar-item"><a href="employer-savedFile.html" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Hồ sơ đã lưu </span></a></li>
+                                    <li class="sidebar-item"><a href="employer-passFile.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Hồ sơ úng tuyển </span></a></li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Thông tin công ty </span></a>
+                                <ul aria-expanded="false" class="collapse  first-level">
+                                    <li class="sidebar-item"><a href="employer-info.html" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Cập nhật thông tin </span></a></li>
+                                    <li class="sidebar-item"><a href="employer-changePassword.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Đổi mật khẩu </span></a></li>
+                                    <li class="sidebar-item"><a href="employer-changeAvt.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Đổi ảnh đại diện </span></a></li>
                                 </ul>
                             </li>
                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../index.jsp" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu">Đăng xuất</span></a></li>
@@ -114,7 +127,7 @@
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                                        <li class="breadcrumb-item active" >Danh sách việc làm đã lưu</li>
+                                        <li class="breadcrumb-item active" >Danh sách tin tuyển dụng</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -125,36 +138,36 @@
                 <div class="container-fluid">
                     <div class="card">
                         <div class="card-body">
-                            
                             <div class="table-responsive">
                                 <table id="zero_config" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
+                                            <th>Họ tên</th>
+                                            <th>Ghi chú</th>
                                             <th>Vị trí</th>
-                                            <th>Công ty</th>
                                             <th>Ngày lưu</th>
-                                            <th>Ngày hết hạn</th>
-                                            <th>Mức lương</th>
-                                            <th>Xóa</th>
+                                            <th>Hành động</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>Kỹ sư Front-end</td>
-                                            <td>FPT Software</td>
+                                            <td>Nguyễn Hữu Dương</td>
+                                            <td>Có kinh nghiệm...</td>
+                                            
+                                            <td>Kỹ sư Back-end (Python)</td>
                                             <td>2/9/2020</td>
-                                            <td>2/10/2020</td>
-                                            <td>10 triệu - 15 triệu</td>
-                                            <td><button type="button" class="btn btn-success btn-sm">Xóa</button></td>
+                                            <td><button type="button" class="btn btn-success btn-sm">Xóa</button> 
+                                                <button type="button" class="btn btn-success btn-sm">Ứng tuyển</button></td>
                                         </tr>
                                         <tr>
-                                            <td>Kỹ sư Back-end (Python)</td>
-                                            <td>Công Ty TNHH Sài Gòn BPO</td>
+                                            <td>Nguyễn Văn A</td>
+                                            <td>Có kinh nghiệm...</td>
+                                            <td>Kỹ sư Font-end</td>
                                             <td>2/9/2020</td>
-                                            <td>2/10/2020</td>
-                                            <td>8 triệu - 11 triệu</td>
-                                            <td><button type="button" class="btn btn-success btn-sm">Xóa</button></td>
+                                            <td><button type="button" class="btn btn-success btn-sm">Xóa</button>
+                                                <button type="button" class="btn btn-success btn-sm">Ứng tuyển</button></td>
                                         </tr>
+                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -193,8 +206,12 @@
              *       Basic Table                   *
              ****************************************/
             $('#zero_config').DataTable();
+
+            
         </script>
 
     </body>
 
 </html>
+
+

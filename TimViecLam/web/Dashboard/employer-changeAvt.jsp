@@ -1,3 +1,10 @@
+<%-- 
+    Document   : employer-changeAvt
+    Created on : Nov 25, 2020, 1:13:08 PM
+    Author     : Duong Nguyen
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -10,12 +17,13 @@
         <meta name="author" content="">
         <!-- Favicon icon -->
         
-        <title>Danh sách tin tuyển dụng</title>
+        <title>Đổi ảnh đại diện</title>
         <!-- Custom CSS -->
-        <link rel="stylesheet" type="text/css" href="assets/extra-libs/multicheck/multicheck.css">
-        <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="assets/libs/select2/dist/css/select2.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/libs/jquery-minicolors/jquery.minicolors.css">
+        <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/libs/quill/dist/quill.snow.css">
         <link href="dist/css/style.min.css" rel="stylesheet">
-
 
     </head>
 
@@ -27,27 +35,17 @@
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
-        <!-- ============================================================== -->
-        <!-- Main wrapper - style you can find in pages.scss -->
-        <!-- ============================================================== -->
+       
         <div id="main-wrapper">
-            <!-- ============================================================== -->
-            <!-- Topbar header - style you can find in pages.scss -->
-            <!-- ============================================================== -->
             <header class="topbar" data-navbarbg="skin5">
                 <nav class="navbar top-navbar navbar-expand-md navbar-dark">
                     <div class="navbar-header" data-logobg="skin5">
-                        <!-- This is for the sidebar toggle which is visible on mobile only -->
                         <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
-
                         <a class="navbar-brand" href="index.html" style="background-color: #89ba16;">
                             <div class="site-logo col-12 text-center" style="color: #fff;font-size: 1.5rem;letter-spacing: .2rem;text-transform: uppercase;">HappyJob</div>
                         </a>
-
                         <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="ti-more"></i></a>
                     </div>
-
-
 
                     <div class="navbar-collapse collapse"  data-navbarbg="skin5" style="margin: auto; flex-grow: 0">
                         <div class="navbar-nav ">
@@ -62,12 +60,7 @@
                     </div>
                 </nav>
             </header>
-            <!-- ============================================================== -->
-            <!-- End Topbar header -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- Left Sidebar - style you can find in sidebar.scss  -->
-            <!-- ============================================================== -->
+           
             <aside class="left-sidebar" data-sidebarbg="skin5">
 
                 <!-- Sidebar scroll-->
@@ -103,16 +96,8 @@
                 </div>
                 <!-- End Sidebar scroll-->
             </aside>
-            <!-- ============================================================== -->
-            <!-- End Left Sidebar - style you can find in sidebar.scss  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- Page wrapper  -->
-            <!-- ============================================================== -->
+
             <div class="page-wrapper">
-                <!-- ============================================================== -->
-                <!-- Bread crumb and right sidebar toggle -->
-                <!-- ============================================================== -->
                 <div class="page-breadcrumb">
                     <div class="row">
                         <div class="col-12 d-flex no-block align-items-center">
@@ -120,7 +105,7 @@
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                                        <li class="breadcrumb-item active" >Danh sách hồ sơ ứng tuyển</li>
+                                        <li class="breadcrumb-item active" >Đổi ảnh đại diện</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -129,43 +114,33 @@
                 </div>
 
                 <div class="container-fluid">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table id="zero_config" class="table table-striped table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th>Họ và tên</th>
-                                            <th>Vị trí ứng tuyển</th>
-                                            <th>Ngày nộp hồ sơ</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Nguyễn Hữu Dương</td>
-                                            <td>Kỹ sư Front-end</td>
-                                            <td>2/9/2020</td>                               
-                                        </tr>
-                                        <tr>
-                                            <td>Nguyễn Văn A</td>
-                                            <td>Kỹ sư Back-end (Python)</td>
-                                            <td>2/9/2020</td>
-                                            
-                                        </tr>
-                                    </tbody>
-                                </table>
+                    <div class="row">
+                        <div class="col-md-7" style="margin: auto; text-align: center">
+                            <div class="card">        
+                                <form class="form-horizontal" id="example-form" action="#">                               
+                                    <div class="card-body">
+                                        <h4 class="card-title">Đổi mật khẩu</h4>
+                                        <div class="form-group row">
+                                            <label for="limg" class="col-sm-3 text-right control-label col-form-label">Ảnh đại diện mới</label>
+                                            <div class="col-sm-9">
+                                                <input type="file" multiple accept='image/*' class="form-control" id="limg" placeholder="chọn">
+                                            </div>
+                                        </div>                
+                                    </div>
+                                    <div class="border-top">
+                                        <div class="card-body">
+                                            <button type="button" class="btn btn-success">Đổi ảnh đại diện</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
-
                         </div>
                     </div>
                 </div>
 
                 <footer class="footer text-center">
-
                 </footer>
-
             </div>
-
         </div>
 
         <script src="assets/libs/jquery/dist/jquery.min.js"></script>
@@ -181,20 +156,50 @@
         <script src="dist/js/sidebarmenu.js"></script>
         <!--Custom JavaScript -->
         <script src="dist/js/custom.min.js"></script>
-        <!-- this page js -->
-        <script src="assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
-        <script src="assets/extra-libs/multicheck/jquery.multicheck.js"></script>
-        <script src="assets/extra-libs/DataTables/datatables.min.js"></script>
+        <!-- This Page JS -->
+        <script src="assets/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+        <script src="dist/js/pages/mask/mask.init.js"></script>
+        <script src="assets/libs/select2/dist/js/select2.full.min.js"></script>
+        <script src="assets/libs/select2/dist/js/select2.min.js"></script>
+        <script src="assets/libs/jquery-asColor/dist/jquery-asColor.min.js"></script>
+        <script src="assets/libs/jquery-asGradient/dist/jquery-asGradient.js"></script>
+        <script src="assets/libs/jquery-asColorPicker/dist/jquery-asColorPicker.min.js"></script>
+        <script src="assets/libs/jquery-minicolors/jquery.minicolors.min.js"></script>
+        <script src="assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+        <script src="assets/libs/quill/dist/quill.min.js"></script>
         <script>
-            /****************************************
-             *       Basic Table                   *
-             ****************************************/
-            $('#zero_config').DataTable();
 
-            
-        </script>
+            $(".select2").select2();
 
+            $('.demo').each(function () {
+
+                $(this).minicolors({
+                    control: $(this).attr('data-control') || 'hue',
+                    position: $(this).attr('data-position') || 'bottom left',
+
+                    change: function (value, opacity) {
+                        if (!value)
+                            return;
+                        if (opacity)
+                            value += ', ' + opacity;
+                        if (typeof console === 'object') {
+                            console.log(value);
+                        }
+                    },
+                    theme: 'bootstrap'
+                });
+
+            });
+            /*datwpicker*/
+            jQuery('.mydatepicker').datepicker();
+            jQuery('#datepicker-autoclose').datepicker({
+                autoclose: true,
+                todayHighlight: true
+            });
+            var quill = new Quill('#editor', {
+                theme: 'snow'
+            });
+
+        </script>     
     </body>
-
 </html>
-
